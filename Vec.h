@@ -18,6 +18,7 @@ public:
     int& get(int i);
     const int& get(int i) const;
 
+    void pop();
 
 
 

@@ -30,3 +30,9 @@ const int& Vec::get(int i) const
     return mem[i];
 }
 
+void Vec::pop()
+{
+    len--;
+}
+
+
