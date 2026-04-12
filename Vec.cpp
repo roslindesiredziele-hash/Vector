@@ -6,7 +6,7 @@ Vec::Vec(int n)
 {
 }
 
-Vec::Vec(const Vec& other) : // Copy constructor
+Vec::Vec(const Vec& other) :
     cap(other.cap),
     len(other.len),
     mem(new int[cap])
@@ -16,6 +16,15 @@ Vec::Vec(const Vec& other) : // Copy constructor
 		mem[i] = other.mem[i];
     }
 }
+
+Vec& Vec::operator=(Vec other)
+{
+    std::swap(cap, other.cap);
+    std::swap(len, other.len);
+    std::swap(mem, other.mem);
+    return *this;
+}
+
 
 
 Vec::~Vec()
