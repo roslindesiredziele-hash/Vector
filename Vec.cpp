@@ -96,4 +96,11 @@ void Vec::clear()
     len = 0;
 }
 
+bool Vec::contains(int x) const
+{
+    for (int i = 0; i < len; i++)
+        if (mem[i] == x)
+            return true;
+    return false;
+}
 
