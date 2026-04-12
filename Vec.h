@@ -11,8 +11,15 @@ private:
 public:
     Vec(int n);
     ~Vec();
+
     int size() const;
     int capacity() const;
+
+    int& get(int i);
+    const int& get(int i) const;
+
+
+
 
 };
 
