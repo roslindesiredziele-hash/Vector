@@ -119,3 +119,9 @@ double Vec::avg() const
 
     return static_cast<double>(sum()) / len;
 }
+
+void Vec::reverse()
+{
+    for (int i = 0; i < len / 2; i++)
+        std::swap(mem[i], mem[len - 1 - i]);
+}
