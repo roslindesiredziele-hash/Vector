@@ -62,5 +62,15 @@ void Vec::resize(int new_cap)
     mem = new_mem;
 }
 
+void Vec::push(int el)
+{
+    if (len == cap)
+        resize(2 * cap);
+
+    mem[len] = el;
+    len++;
+}
+
+
 
 

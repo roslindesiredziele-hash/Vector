@@ -23,8 +23,27 @@ public:
 
     void resize(int new_cap);
 
+    void push(int el);
 
+    int& first();
+    const int& first() const;
 
+    int& last();
+    const int& last() const;
+
+    void clear();
+    bool contains(int x) const;
+    int sum() const;
+    double avg() const;
+
+    void reverse();
+    void reverse(int l, int r);
+
+    void rotate(int x);
+
+    Vec(const Vec& other);
+    Vec& operator=(Vec cpy);
 };
 
 #endif
+
