@@ -32,7 +32,8 @@ const int& Vec::get(int i) const
 
 void Vec::pop()
 {
-    len--;
+    if (!empty())
+        len--;
 }
 
 bool Vec::empty() const
