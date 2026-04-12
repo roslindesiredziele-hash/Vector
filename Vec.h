@@ -12,6 +12,7 @@ public:
     Vec(int n);
     ~Vec();
     int size() const;
+    int capacity() const;
 
 };
 

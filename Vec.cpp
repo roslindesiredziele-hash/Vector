@@ -13,3 +13,7 @@ int Vec::size() const
 {
     return len;
 }
+int Vec::capacity() const
+{
+    return cap;
+}
