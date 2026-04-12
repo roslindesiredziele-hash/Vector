@@ -71,6 +71,16 @@ void Vec::push(int el)
     len++;
 }
 
+int& Vec::first()
+{
+    return mem[0];
+}
+
+const int& Vec::first() const
+{
+    return mem[0];
+}
+
 
 
 
