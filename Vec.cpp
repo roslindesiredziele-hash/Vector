@@ -1,8 +1,9 @@
 #include "Vec.h"
 #include <algorithm>
+#include <stdexcept>
 
 Vec::Vec(int n)
-    : cap(n), len(n), mem(new int[cap])
+    : cap(n), len(0), mem(new int[cap])
 {
 }
 
@@ -44,7 +45,10 @@ int Vec::capacity() const
 
 int& Vec::get(int i)
 {
+    if (i < 0 || i >= len)
+        throw std::out_of_range("Index out of range");
     return mem[i];
+
 }
 
 const int& Vec::get(int i) const
@@ -94,21 +98,37 @@ void Vec::push(int el)
 
 int& Vec::first()
 {
+    if (empty())
+    {
+		throw std::out_of_range("Vector is empty");
+    }
     return mem[0];
 }
 
 const int& Vec::first() const
 {
+    if (empty())
+    {
+        throw std::out_of_range("Vector is empty");
+    }
     return mem[0];
 }
 
 int& Vec::last()
 {
+    if (empty())
+    {
+        throw std::out_of_range("Vector is empty");
+    }
     return mem[len - 1];
 }
 
 const int& Vec::last() const
 {
+    if (empty())
+    {
+        throw std::out_of_range("Vector is empty");
+    }
     return mem[len - 1];
 }
 
