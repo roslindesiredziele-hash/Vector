@@ -91,5 +91,9 @@ const int& Vec::last() const
     return mem[len - 1];
 }
 
+void Vec::clear()
+{
+    len = 0;
+}
 
 
