@@ -19,6 +19,7 @@ public:
     const int& get(int i) const;
 
     void pop();
+    bool empty() const;
 
 
 

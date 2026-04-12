@@ -35,4 +35,9 @@ void Vec::pop()
     len--;
 }
 
+bool Vec::empty() const
+{
+    return len == 0;
+}
+
 
