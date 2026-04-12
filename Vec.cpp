@@ -125,3 +125,33 @@ void Vec::reverse()
     for (int i = 0; i < len / 2; i++)
         std::swap(mem[i], mem[len - 1 - i]);
 }
+
+void Vec::reverse(int l, int r)
+{
+    while (l < r)
+    {
+        std::swap(mem[l], mem[r]);
+        l++;
+        r--;
+    }
+}
+
+void Vec::rotate(int x)
+{
+    if (len == 0)
+        return;
+
+    // Normalize x
+    x = x % len;
+    if (x < 0)
+        x += len;
+
+    // If x == 0, no rotation needed
+    if (x == 0)
+        return;
+
+    // Three-step rotation
+    reverse();                 // reverse whole vector
+    reverse(0, x - 1);         // reverse first part
+    reverse(x, len - 1);       // reverse second part
+}
