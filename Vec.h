@@ -11,6 +11,8 @@ private:
 public:
     Vec(int n);
     ~Vec();
+    int size() const;
+
 };
 
 #endif

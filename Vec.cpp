@@ -9,3 +9,7 @@ Vec::~Vec()
 {
     delete[] mem;
 }
+int Vec::size() const
+{
+    return len;
+}
