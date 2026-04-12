@@ -6,6 +6,18 @@ Vec::Vec(int n)
 {
 }
 
+Vec::Vec(const Vec& other) : // Copy constructor
+    cap(other.cap),
+    len(other.len),
+    mem(new int[cap])
+{
+    for (int i = 0; i < len; i++)
+    {
+		mem[i] = other.mem[i];
+    }
+}
+
+
 Vec::~Vec()
 {
     delete[] mem;
