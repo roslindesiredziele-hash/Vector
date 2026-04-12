@@ -81,6 +81,15 @@ const int& Vec::first() const
     return mem[0];
 }
 
+int& Vec::last()
+{
+    return mem[len - 1];
+}
+
+const int& Vec::last() const
+{
+    return mem[len - 1];
+}
 
 
 
