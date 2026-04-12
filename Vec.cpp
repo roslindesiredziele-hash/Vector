@@ -104,3 +104,10 @@ bool Vec::contains(int x) const
     return false;
 }
 
+int Vec::sum() const
+{
+    int s = 0;
+    for (int i = 0; i < len; i++)
+        s += mem[i];
+    return s;
+}
