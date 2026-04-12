@@ -21,6 +21,8 @@ public:
     void pop();
     bool empty() const;
 
+    void resize(int new_cap);
+
 
 
 };

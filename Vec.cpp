@@ -1,4 +1,5 @@
 #include "Vec.h"
+#include <algorithm>
 
 Vec::Vec(int n)
     : cap(n), len(n), mem(new int[cap])
@@ -40,5 +41,26 @@ bool Vec::empty() const
 {
     return len == 0;
 }
+
+void Vec::resize(int new_cap)
+{
+    // Ensure capacity is at least 1
+    cap = std::max(1, new_cap);
+
+    // Allocate new memory
+    int* new_mem = new int[cap];
+
+    // Adjust length if needed
+    len = std::min(len, cap);
+
+    // Copy existing elements
+    for (int i = 0; i < len; i++)
+        new_mem[i] = mem[i];
+
+    // Replace old memory
+    delete[] mem;
+    mem = new_mem;
+}
+
 
 
