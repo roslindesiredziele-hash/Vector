@@ -111,3 +111,11 @@ int Vec::sum() const
         s += mem[i];
     return s;
 }
+
+double Vec::avg() const
+{
+    if (len == 0)
+        return 0.0; // avoid division by zero
+
+    return static_cast<double>(sum()) / len;
+}
