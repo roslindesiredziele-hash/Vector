@@ -50,6 +50,13 @@ int &Vec::operator[](int i)
     return mem[i];
 }
 
+const int &Vec::operator[](int i) const
+{
+    if (i < 0 || i >= len)
+        throw std::out_of_range("index out of range");
+    return mem[i];
+}
+
 int& Vec::get(int i)
 {
     if (i < 0 || i >= len)
