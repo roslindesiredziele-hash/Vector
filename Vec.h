@@ -20,6 +20,8 @@ public:
     int& operator[](int i);
     const int& operator[](int i) const;
 
+    friend std::ostream& operator<<(std::ostream& ostr, const Vec& v);
+
     int& get(int i);
     const int& get(int i) const;
 
