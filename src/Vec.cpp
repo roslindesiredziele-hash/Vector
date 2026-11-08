@@ -269,3 +269,15 @@ void Vec::rotate(int x)
     reverse(0, x - 1);   // reverse first part
     reverse(x, len - 1); // reverse second part
 }
+
+int* Vec::begin()
+{
+    return mem;
+}
+
+const int* Vec::begin() const
+{
+    return mem;
+}
+
+
