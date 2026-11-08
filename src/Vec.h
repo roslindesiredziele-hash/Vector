@@ -40,7 +40,7 @@ public:
     const int& last() const;
 
     void clear();
-    bool contains(int x) const;
+    bool linearSearch(int x) const;
     int sum() const;
     double avg() const;
 
