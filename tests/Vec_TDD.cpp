@@ -119,6 +119,29 @@ TEST_CASE("get throws on invalid index")
     );
 }
 
+TEST_CASE("operator[] throws on invalid index")
+{
+    Vec v(1);
 
+    REQUIRE_THROWS_AS(
+        v[0],
+        std::out_of_range
+    );
+}
 
+TEST_CASE("resize preserves data")
+{
+    Vec v(1);
 
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    v.resize(10);
+
+    CHECK(v.size() == 3);
+
+    CHECK(v[0] == 1);
+    CHECK(v[1] == 2);
+    CHECK(v[2] == 3);
+}
