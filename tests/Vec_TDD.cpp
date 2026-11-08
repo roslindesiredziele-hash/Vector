@@ -1,3 +1,5 @@
+#define CATCH_CONFIG_MAIN
+#include "../external/catch.hpp"
 #include <iostream>
 #include "Vec.h"
 
