@@ -17,6 +17,9 @@ public:
     int size() const;
     int capacity() const;
 
+    int swapInt(int a, int b);
+
+
     int& operator[](int i);
     const int& operator[](int i) const;
 

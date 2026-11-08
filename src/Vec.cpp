@@ -19,8 +19,8 @@ Vec::Vec(const Vec &other) : cap(other.cap),
 
 Vec &Vec::operator=(Vec other)
 {
-    std::swap(cap, other.cap);
-    std::swap(len, other.len);
+    swapInt(cap, other.cap);
+    swapInt(len, other.len);
     std::swap(mem, other.mem);
     return *this;
 }
@@ -28,6 +28,13 @@ Vec &Vec::operator=(Vec other)
 Vec::~Vec()
 {
     delete[] mem;
+}
+
+int swapInt(int a, int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 int Vec::size() const
@@ -193,14 +200,14 @@ double Vec::avg() const
 void Vec::reverse()
 {
     for (int i = 0; i < len / 2; i++)
-        std::swap(mem[i], mem[len - 1 - i]);
+        swapInt(mem[i], mem[len - 1 - i]);
 }
 
 void Vec::reverse(int l, int r)
 {
     while (l < r)
     {
-        std::swap(mem[l], mem[r]);
+        swapInt(mem[l], mem[r]);
         l++;
         r--;
     }
