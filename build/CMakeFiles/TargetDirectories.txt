@@ -1,4 +1,0 @@
-C:/MyPROJECTS/Custom-Dynamic-Vector/build/CMakeFiles/Vec_TDD.dir
-C:/MyPROJECTS/Custom-Dynamic-Vector/build/CMakeFiles/RUN_TESTS.dir
-C:/MyPROJECTS/Custom-Dynamic-Vector/build/CMakeFiles/ALL_BUILD.dir
-C:/MyPROJECTS/Custom-Dynamic-Vector/build/CMakeFiles/ZERO_CHECK.dir
