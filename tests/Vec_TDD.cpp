@@ -288,3 +288,17 @@ TEST_CASE("resize shrinks vector")
     CHECK(v[2] == 3);
 }
 
+TEST_CASE("resize to zero keeps minimum capacity")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+
+    v.resize(0);
+
+    CHECK(v.capacity() == 1);
+    CHECK(v.size() == 1);
+
+    CHECK(v[0] == 1);
+}
