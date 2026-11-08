@@ -1,339 +1,219 @@
-# Vector
+# Hi, I'm Desire Roslin Dziele 👋
 
-## Table of Contents
+### Computer Science Student at the University of Łódź
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-  - [Memory Management](#memory-management)
-  - [Container Operations](#container-operations)
-  - [Element Access](#element-access)
-  - [Algorithms](#algorithms)
-  - [Iterator Support](#iterator-support)
-- [Design Goals](#design-goals)
-- [Example Usage](#example-usage)
-- [Design Notes](#design-notes)
-- [Complexity](#complexity)
-- [Requirements](#requirements)
-- [Build](#build)
-- [Testing](#testing)
-- [Continuous Integration](#continuous-integration)
-- [Project Structure](#project-structure)
-- [Technologies](#technologies)
-- [Future Improvements](#future-improvements)
-- [Author](#author)
+I am a Computer Science student at the University of Łódź with a strong interest in software engineering, modern C++, algorithms, systems programming, and full-stack web development.
+
+My work ranges from implementing custom C++ data structures and benchmarking algorithms to building modern web applications with Angular, Express.js, TypeScript, and SQLite. I enjoy understanding how software works internally and building maintainable, well-tested software from first principles.
+
+Many of my projects incorporate automated testing, build automation, and continuous integration using tools such as Catch2, CMake, CTest, and GitHub Actions.
 
 ---
 
-## Project Overview
+## Tech Stack
 
-Vec is a custom dynamic array implementation written in modern C++ that explores the fundamental concepts behind container design and dynamic memory management.
+### Languages
 
-Rather than relying on the Standard Template Library, the project implements the core mechanisms that make dynamic containers work, including resource ownership, automatic capacity growth, deep-copy behavior, move semantics, iterator support, searching algorithms, and common sequence operations.
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
 
-The project was developed to strengthen understanding of:
+### Full-Stack Development
 
-- Dynamic memory allocation and deallocation
-- Resource ownership and object lifetimes
-- Copy and move semantics
-- Exception handling
-- Algorithm implementation
-- Automated testing
-- Modern C++ development workflows
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-Beyond the container implementation itself, the repository demonstrates professional software engineering practices through:
+### Testing & Tooling
 
-- Automated testing with Catch2
-- Build automation with CMake
-- Test orchestration with CTest
-- Continuous Integration using GitHub Actions
-- Cross-platform compilation support
+![Catch2](https://img.shields.io/badge/Catch2-202020?style=for-the-badge)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![Supertest](https://img.shields.io/badge/Supertest-333333?style=for-the-badge)
 
-The goal is not to replace `std::vector`, but to understand the design decisions, trade-offs, and implementation challenges behind dynamic sequence containers while building a maintainable and well-tested C++ project.
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![CTest](https://img.shields.io/badge/CTest-00599C?style=for-the-badge)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
-## Features
+## Areas of Interest
 
-### Memory Management
+- Software Engineering
+- Modern C++
+- Data Structures and Algorithms
+- Systems Programming
+- Full-Stack Development
+- Software Architecture
+- Database Systems
+- Automated Testing
+- Performance Analysis
+- Optimization Problems
 
-- Dynamic memory allocation
-- Automatic capacity growth through capacity doubling
+---
+
+## Featured Projects
+
+### 🚀 Person Management System
+
+Full-stack CRUD application built with Angular, Express.js, SQLite, and TypeScript.
+
+Features:
+
+- RESTful API design
+- Database persistence
+- Integration testing
+- Faker-generated sample data
+- Structured client-server architecture
+
+**Tech:** Angular, Express.js, SQLite, TypeScript, Vitest, Supertest
+
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/person-management-system
+
+---
+
+### 📊 Algorithms Sorting Benchmark
+
+Performance-analysis project implementing and benchmarking:
+
+- Bubble Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Heap Sort
+- Shell Sort
+
+Features:
+
+- Automated benchmarking
+- CSV result generation
+- Python graph generation
+- Complexity analysis
+- Performance visualization
+- Custom vector implementation
+
+**Tech:** C, C++, Python, Algorithms
+
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/Algorithms-Sorting-Benchmark
+
+---
+
+### 📦 Vec
+
+Custom dynamic array implementation built to explore memory management, iterator support, and container design in modern C++.
+
+Features:
+
 - Deep copy semantics
 - Move semantics
-- Resource ownership management
+- Dynamic capacity growth
+- Iterator support
+- Automated testing with Catch2
+- Build automation with CMake and CTest
+- Continuous Integration using GitHub Actions
 
-### Container Operations
+**Project Statistics**
 
-- `push()`
-- `pop()`
-- `clear()`
-- `resize()`
-- `size()`
-- `capacity()`
-- `empty()`
+- 34 test cases
+- 84 assertions
+- Automated CI/CD pipeline
 
-### Element Access
+**Tech:** C++, Catch2, CMake, CTest, GitHub Actions
 
-- `operator[]`
-- `get()`
-- `first()`
-- `last()`
-
-### Algorithms
-
-- Linear Search
-- Binary Search
-- Reverse
-- Range Reverse
-- Rotation
-- Sum
-- Average
-
-### Iterator Support
-
-- `begin()`
-- `end()`
-
-Supports range-based loops:
-
-```cpp
-for (int value : vec)
-{
-    std::cout << value << '\n';
-}
-```
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/Vector
 
 ---
 
-## Design Goals
+### 🧩 Language Evolution Simulator
 
-This project focuses on:
+Object-oriented programming project modelling natural and programming languages through abstraction, inheritance, polymorphism, and virtual dispatch.
 
-- Understanding dynamic memory management
-- Exploring copy and move semantics
-- Implementing common container operations
-- Practicing exception handling
-- Building automated test suites with Catch2
-- Using CMake and CTest for build automation
-- Applying continuous integration through GitHub Actions
+Features:
 
----
+- Inheritance hierarchies
+- Runtime polymorphism
+- Automated testing with Catch2
+- CMake build system
+- CTest integration
+- GitHub Actions CI
 
-## Example Usage
+**Project Statistics**
 
-```cpp
-#include "Vec.h"
-#include <iostream>
+- 10 test cases
+- 61 assertions
+- Automated CI/CD pipeline
 
-int main()
-{
-    Vec v(2);
+**Tech:** C++, OOP, Catch2, CMake, CTest, GitHub Actions
 
-    v.push(10);
-    v.push(20);
-    v.push(30);
-
-    std::cout << v << '\n';
-}
-```
-
-Output:
-
-```text
-[10; 20; 30]
-```
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/Language
 
 ---
 
-## Design Notes
+### 🚚 CVRPTW
 
-### Capacity Growth
+Implementation of the Capacitated Vehicle Routing Problem with Time Windows focusing on route optimization, scheduling constraints, and combinatorial optimization.
 
-When the vector reaches its capacity during insertion, the storage capacity is automatically doubled.
+This project is being developed as the foundation for my future bachelor's project.
 
-### Resize Behavior
+**Tech:** C++, Optimization
 
-In this implementation, `resize()` modifies both capacity and logical size when shrinking. If the new rator[] | O(1) |
-| linearSearch | O(n) |
-| binarySearch | O(log n) |
-| reverse | O(n) |
-| reverse(l, r) | O(n) |
-| rotate | O(n) |
-| sum | O(n) |
-| avg | O(n) |
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/CVRPTW
 
 ---
 
-## Requirements
+### 🌐 IPv4Address
 
-- C++17 compatible compiler
-- CMake 3.10+
-- Catch2 Single Header (`external/catch.hpp`)
+Object-oriented implementation for parsing, validating, and manipulating IPv4 addresses.
 
-Supported compilers:
+**Tech:** C++, OOP
 
-- GNU g++
-- Clang
-- Microsoft Visual Studio (MSVC)
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/IPv4Address
 
 ---
 
-## Build
+### 📍 CitiesDistance
 
-### Configure
+Geographic distance calculator implementing coordinate-based distance calculations through reusable software components and object-oriented design.
 
-```bash
-mkdir build
-cd build
+**Tech:** C++, OOP
 
-cmake ..
-```
-
-### Build
-
-```bash
-cmake --build .
-```
-
-### Run Tests
-
-Linux/macOS:
-
-```bash
-ctest --verbose
-```
-
-Visual Studio:
-
-```bash
-ctest -C Debug --verbose
-```
-
-Expected output:
-
-```text
-All tests passed
-```
+🔗 Repository:  
+https://github.com/roslindesiredziele-hash/CitiesDistance
 
 ---
 
-## Testing
+## Currently Learning
 
-The project uses **Catch2** for automated testing.
-
-### Coverage
-
-✅ Construction and initialization  
-✅ Negative capacity validation  
-✅ Deep copy semantics  
-✅ Move semantics  
-✅ Assignment operator behavior  
-✅ Bounds checking  
-✅ Resize behavior  
-✅ Search algorithms  
-✅ Reverse operations  
-✅ Range reverse operations  
-✅ Rotation behavior  
-✅ Iterator support  
-✅ Aggregate operations  
-✅ Empty vector behavior  
-✅ First/Last element access  
-✅ Clear operation  
-✅ Pop operation  
-
-### Current Results
-
-```text
-34 test cases
-84 assertions
-100% passing
-```
-
-CTest output:
-
-```text
-100% tests passed out of 1
-
-All tests passed (84 assertions in 34 test cases)
-```
+- Advanced C++
+- Generic Programming and Templates
+- Software Architecture
+- Design Patterns
+- Angular Ecosystem
+- Backend Development with Express.js
+- Optimization Algorithms
+- Routing and Schedulingilding production-quality software projects
+- Obtain a software engineering internship
+- Complete Kanban as a portfolio-grade full-stack application
+- Evolve CVRPTW into a bachelor-project-quality optimization system
+- Prepare for Erasmus+ studies in Nancy (2026/2027)
 
 ---
 
-## Continuous Integration
+## Contact
 
-The project uses GitHub Actions for continuous integration.
+📧 Email: **roslindesiredziele@gmail.com**
 
-Every push and pull request automatically:
-
-1. Configures the project using CMake
-2. Builds the project
-3. Executes the Catch2 test suite through CTest
-
-Current CI status:
-
-```text
-Build: Passing
-Tests: Passing
-34 test cases
-84 assertions
-100% passing
-```
+💻 GitHub: **https://github.com/roslindesiredziele-hash**
 
 ---
 
-## Project Structure
-
-```text
-Vector/
-│
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-│
-├── external/
-│   └── catch.hpp
-│
-├── src/
-│   ├── Vec.h
-│   └── Vec.cpp
-│
-├── tests/
-│   └── Vec_TDD.cpp
-│
-├── CMakeLists.txt
-│
-└── README.md
-```
-
----
-
-## Technologies
-
-- C++17
-- Catch2
-- CMake
-- CTest
-- GitHub Actions
-- Git
-- GitHub
-
----
-
-## Future Improvements
-
-Potential extensions include:
-
-- Explicit move assignment operator
-- `reserve()`
-- `shrink_to_fit()`
-- Additional exception-safety guarantees
-- Iterator-specific test coverage
-- Generic template implementation (`Vec<T>`)
-
----
-
-## Author
-
-**Desire Roslin Dziele**  
-Computer Science Student  
-University of Łódź
+> “Understanding how software works internally is the best way to build software that lasts.”
