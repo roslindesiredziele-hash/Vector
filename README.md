@@ -1,4 +1,4 @@
-# Vec
+# Vector
 
 ## Table of Contents
 
