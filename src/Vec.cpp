@@ -47,7 +47,7 @@ Vec::Vec(Vec&& other) noexcept
     other.mem = nullptr;
 }
 
-void swapInt(int &a, int &b)
+void Vec::swapInt(int &a, int &b)
 {
     int temp = a;
     a = b;
@@ -122,17 +122,16 @@ bool Vec::empty() const
 
 void Vec::resize(int new_cap)
 {
-    int new_capacity = std::max(1, new_cap);
-    int* new_mem = new int[new_capacity];
-    cap = new_capacity;
-    int new_len = std::min(len, new_capacity);
+    int* new_mem = new int[new_cap];
+    cap = new_cap;
+    int new_len = std::min(len, new_cap);
 
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < new_len; i++)
         new_mem[i] = mem[i];
 
     delete[] mem;
     mem = new_mem;
-    cap = new_capacity;
+    cap = new_cap;
     len = new_len;
 }
 
