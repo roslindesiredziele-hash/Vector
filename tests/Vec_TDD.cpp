@@ -403,3 +403,15 @@ TEST_CASE("iterators support range based loops")
 
     CHECK(total == 10);
 }
+
+TEST_CASE("reverse single element vector")
+{
+    Vec v(1);
+
+    v.push(42);
+
+    v.reverse();
+
+    CHECK(v.size() == 1);
+    CHECK(v[0] == 42);
+}
