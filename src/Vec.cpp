@@ -123,15 +123,19 @@ bool Vec::empty() const
 void Vec::resize(int new_cap)
 {
     int new_capacity = std::max(1, new_cap);
-    int* new_mem = new int(new_capacity);
+    int* new_mem = new int[new_capacity];
+    int new_len = std::min(len, new_capacity);
 
-    for (int i = 0; i < new_cap; i++)
+    for (int i = 0; i < new_len; i++)
+    {
         new_mem[i] = mem[i];
+    }
 
     delete[] mem;
+
     mem = new_mem;
-    cap = new_cap;
-    len = new_cap;
+    cap = new_capacity;
+    len = new_len;
 }
 
 void Vec::push(int el)
