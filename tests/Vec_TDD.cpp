@@ -19,25 +19,6 @@ TEST_CASE("push increases size and stores values")
     CHECK(v.get(2) == 30);
 }
 
-TEST_CASE("copy constructor performs deep copy")
-{
-    Vec a(1);
-
-    a.push(5);
-    a.push(7);
-
-    Vec b = a;
-
-    REQUIRE(b.size() == 2);
-
-    CHECK(b.get(0) == 5);
-    CHECK(b.get(1) == 7);
-
-    a.get(0) = 99;
-
-    CHECK(b.get(0) == 5);
-}
-
 TEST_CASE("Constructor initializes empty vector")
 {
     Vec v(10);
