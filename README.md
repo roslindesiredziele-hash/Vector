@@ -2,7 +2,7 @@
 
 A custom dynamic array implementation written in modern C++ to explore memory management, copy and move semantics, dynamic resizing, iterator support, algorithm implementation, and automated testing.
 
-The project was developed as an educational exercise to better understand how containers such as `std::vector` work internally while applying modern software engineering practices including automated testing, build automation, and continuous integration.
+The project was developed to better understand how containers such as `std::vector` work internally while applying modern software engineering practices including automated testing, build automation, and continuous integration.
 
 ## Highlights
 
