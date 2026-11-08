@@ -3,10 +3,15 @@
 #include <stdexcept>
 
 Vec::Vec(int n)
-    : cap(n), len(0), mem(new int[cap])
 {
     if (n < 0)
-    throw std::invalid_argument("cannot be initialize with negative value");
+        throw std::invalid_argument(
+            "cannot initialize with negative capacity"
+        );
+
+    cap = std::max(1, n);
+    len = 0;
+    mem = new int[cap];
 }
 
 Vec::Vec(const Vec &other) : cap(other.cap),
@@ -30,6 +35,11 @@ Vec &Vec::operator=(Vec other)
 Vec::~Vec()
 {
     delete[] mem;
+}
+
+Vec::Vec(Vec&& other) noexcept
+{
+
 }
 
 int swapInt(int a, int b)
@@ -104,22 +114,12 @@ bool Vec::empty() const
 {
     return len == 0;
 }
-/*int new_capacity = std::max(1, new_cap);
-
-int* new_mem = new int[new_capacity];
-
-...
-
-cap = new_capacity;
-mem = new_mem;*/
 
 void Vec::resize(int new_cap)
 {
-    // Ensure capacity is at least 1
-    cap = std::max(1, new_cap);
-
-    // Allocate new memory
-    int *new_mem = new int[cap];
+    int new_capacity = std::max(1, new_cap);
+    int* new_mem = new int[new_capacity];
+    cap = new_capacity
 
     // Adjust length if needed
     len = std::min(len, cap);
