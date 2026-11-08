@@ -1,19 +1,56 @@
 # Vec
 
-A custom dynamic array implementation written in modern C++ to explore memory management, copy and move semantics, dynamic resizing, iterator support, algorithm implementation, and automated testing.
+## Table of Contents
 
-The project was developed to better understand how containers such as `std::vector` work internally while applying modern software engineering practices including automated testing, build automation, and continuous integration.
+- [Project Overview](#project-overview)
+- [Features](#features)
+  - [Memory Management](#memory-management)
+  - [Container Operations](#container-operations)
+  - [Element Access](#element-access)
+  - [Algorithms](#algorithms)
+  - [Iterator Support](#iterator-support)
+- [Design Goals](#design-goals)
+- [Example Usage](#example-usage)
+- [Design Notes](#design-notes)
+- [Complexity](#complexity)
+- [Requirements](#requirements)
+- [Build](#build)
+- [Testing](#testing)
+- [Continuous Integration](#continuous-integration)
+- [Project Structure](#project-structure)
+- [Technologies](#technologies)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
-## Highlights
+---
 
-- Dynamic memory management
-- Deep copy semantics
-- Move semantics
-- Iterator support
+## Project Overview
+
+Vec is a custom dynamic array implementation written in modern C++ that explores the fundamental concepts behind container design and dynamic memory management.
+
+Rather than relying on the Standard Template Library, the project implements the core mechanisms that make dynamic containers work, including resource ownership, automatic capacity growth, deep-copy behavior, move semantics, iterator support, searching algorithms, and common sequence operations.
+
+The project was developed to strengthen understanding of:
+
+- Dynamic memory allocation and deallocation
+- Resource ownership and object lifetimes
+- Copy and move semantics
+- Exception handling
+- Algorithm implementation
+- Automated testing
+- Modern C++ development workflows
+
+Beyond the container implementation itself, the repository demonstrates professional software engineering practices through:
+
 - Automated testing with Catch2
-- CMake build system
-- CTest integration
-- GitHub Actions CI
+- Build automation with CMake
+- Test orchestration with CTest
+- Continuous Integration using GitHub Actions
+- Cross-platform compilation support
+
+The goal is not to replace `std::vector`, but to understand the design decisions, trade-offs, and implementation challenges behind dynamic sequence containers while building a maintainable and well-tested C++ project.
+
+---
 
 ## Features
 
@@ -66,6 +103,8 @@ for (int value : vec)
 }
 ```
 
+---
+
 ## Design Goals
 
 This project focuses on:
@@ -77,6 +116,8 @@ This project focuses on:
 - Building automated test suites with Catch2
 - Using CMake and CTest for build automation
 - Applying continuous integration through GitHub Actions
+
+---
 
 ## Example Usage
 
@@ -102,6 +143,8 @@ Output:
 [10; 20; 30]
 ```
 
+---
+
 ## Design Notes
 
 ### Capacity Growth
@@ -110,83 +153,16 @@ When the vector reaches its capacity during insertion, the storage capacity is a
 
 ### Resize Behavior
 
-In this implementation, `resize()` modifies both capacity and logical size when shrinking. If the new capacity is smaller than the current number of stored elements, excess elements are discarded.
-
-### Binary Search
-
-`binarySearch()` assumes elements are stored in ascending sorted order.
-
-## Complexity
-
-| Operation | Complexity |
-|------------|------------|
-| push | O(1) amortized |
-| pop | O(1) |
-| get | O(1) |
-| operator[] | O(1) |
+In this implementation, `resize()` modifies both capacity and logical size when shrinking. If the new rator[] | O(1) |
 | linearSearch | O(n) |
 | binarySearch | O(log n) |
 | reverse | O(n) |
+| reverse(l, r) | O(n) |
 | rotate | O(n) |
 | sum | O(n) |
 | avg | O(n) |
 
-## Testing
-
-The project uses **Catch2** for automated testing.
-
-### Coverage
-
-✅ Construction and initialization  
-✅ Negative capacity validation  
-✅ Deep copy semantics  
-✅ Move semantics  
-✅ Assignment operator behavior  
-✅ Bounds checking  
-✅ Resize behavior  
-✅ Search algorithms  
-✅ Reverse operations  
-✅ Rotation behavior  
-✅ Iterator support  
-✅ Aggregate operations  
-✅ Empty vector behavior  
-✅ First/Last element access  
-✅ Clear operation  
-✅ Pop operation  
-
-### Results
-
-```text
-34 test cases
-84 assertions
-100% passing
-```
-
-CTest output:
-
-```text
-100% tests passed out of 1
-
-All tests passed (84 assertions in 34 test cases)
-```
-
-## Continuous Integration
-
-GitHub Actions automatically:
-
-1. Configures the project using CMake
-2. Builds the project
-3. Executes the Catch2 test suite through CTest
-
-Current CI Status:
-
-```text
-Build: Passing
-Tests: Passing
-34 test cases
-84 assertions
-100% passing
-```
+---
 
 ## Requirements
 
@@ -199,6 +175,8 @@ Supported compilers:
 - GNU g++
 - Clang
 - Microsoft Visual Studio (MSVC)
+
+---
 
 ## Build
 
@@ -231,6 +209,78 @@ Visual Studio:
 ctest -C Debug --verbose
 ```
 
+Expected output:
+
+```text
+All tests passed
+```
+
+---
+
+## Testing
+
+The project uses **Catch2** for automated testing.
+
+### Coverage
+
+✅ Construction and initialization  
+✅ Negative capacity validation  
+✅ Deep copy semantics  
+✅ Move semantics  
+✅ Assignment operator behavior  
+✅ Bounds checking  
+✅ Resize behavior  
+✅ Search algorithms  
+✅ Reverse operations  
+✅ Range reverse operations  
+✅ Rotation behavior  
+✅ Iterator support  
+✅ Aggregate operations  
+✅ Empty vector behavior  
+✅ First/Last element access  
+✅ Clear operation  
+✅ Pop operation  
+
+### Current Results
+
+```text
+34 test cases
+84 assertions
+100% passing
+```
+
+CTest output:
+
+```text
+100% tests passed out of 1
+
+All tests passed (84 assertions in 34 test cases)
+```
+
+---
+
+## Continuous Integration
+
+The project uses GitHub Actions for continuous integration.
+
+Every push and pull request automatically:
+
+1. Configures the project using CMake
+2. Builds the project
+3. Executes the Catch2 test suite through CTest
+
+Current CI status:
+
+```text
+Build: Passing
+Tests: Passing
+34 test cases
+84 assertions
+100% passing
+```
+
+---
+
 ## Project Structure
 
 ```text
@@ -255,6 +305,8 @@ Vector/
 └── README.md
 ```
 
+---
+
 ## Technologies
 
 - C++17
@@ -265,13 +317,20 @@ Vector/
 - Git
 - GitHub
 
+---
+
 ## Future Improvements
 
 Potential extensions include:
 
+- Explicit move assignment operator
+- `reserve()`
 - `shrink_to_fit()`
 - Additional exception-safety guarantees
+- Iterator-specific test coverage
 - Generic template implementation (`Vec<T>`)
+
+---
 
 ## Author
 
