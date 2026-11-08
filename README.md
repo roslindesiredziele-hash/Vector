@@ -4,7 +4,16 @@ A custom dynamic array implementation written in modern C++ to explore memory ma
 
 The project was developed as an educational exercise to better understand how containers such as `std::vector` work internally while applying modern software engineering practices including automated testing, build automation, and continuous integration.
 
----
+## Highlights
+
+- Dynamic memory management
+- Deep copy semantics
+- Move semantics
+- Iterator support
+- Automated testing with Catch2
+- CMake build system
+- CTest integration
+- GitHub Actions CI
 
 ## Features
 
@@ -57,8 +66,6 @@ for (int value : vec)
 }
 ```
 
----
-
 ## Design Goals
 
 This project focuses on:
@@ -70,8 +77,6 @@ This project focuses on:
 - Building automated test suites with Catch2
 - Using CMake and CTest for build automation
 - Applying continuous integration through GitHub Actions
-
----
 
 ## Example Usage
 
@@ -97,8 +102,6 @@ Output:
 [10; 20; 30]
 ```
 
----
-
 ## Design Notes
 
 ### Capacity Growth
@@ -111,9 +114,7 @@ In this implementation, `resize()` modifies both capacity and logical size when 
 
 ### Binary Search
 
-`binarySearch()` assumes that elements are stored in ascending sorted order.
-
----
+`binarySearch()` assumes elements are stored in ascending sorted order.
 
 ## Complexity
 
@@ -130,21 +131,74 @@ In this implementation, `resize()` modifies both capacity and logical size when 
 | sum | O(n) |
 | avg | O(n) |
 
----
+## Testing
+
+The project uses **Catch2** for automated testing.
+
+### Coverage
+
+✅ Construction and initialization  
+✅ Negative capacity validation  
+✅ Deep copy semantics  
+✅ Move semantics  
+✅ Assignment operator behavior  
+✅ Bounds checking  
+✅ Resize behavior  
+✅ Search algorithms  
+✅ Reverse operations  
+✅ Rotation behavior  
+✅ Iterator support  
+✅ Aggregate operations  
+✅ Empty vector behavior  
+✅ First/Last element access  
+✅ Clear operation  
+✅ Pop operation  
+
+### Results
+
+```text
+34 test cases
+84 assertions
+100% passing
+```
+
+CTest output:
+
+```text
+100% tests passed out of 1
+
+All tests passed (84 assertions in 34 test cases)
+```
+
+## Continuous Integration
+
+GitHub Actions automatically:
+
+1. Configures the project using CMake
+2. Builds the project
+3. Executes the Catch2 test suite through CTest
+
+Current CI Status:
+
+```text
+Build: Passing
+Tests: Passing
+34 test cases
+84 assertions
+100% passing
+```
 
 ## Requirements
 
 - C++17 compatible compiler
 - CMake 3.10+
-- Catch2 Single Header Version (`external/catch.hpp`)
+- Catch2 Single Header (`external/catch.hpp`)
 
 Supported compilers:
 
 - GNU g++
 - Clang
 - Microsoft Visual Studio (MSVC)
-
----
 
 ## Build
 
@@ -177,76 +231,6 @@ Visual Studio:
 ctest -C Debug --verbose
 ```
 
----
-
-## Testing
-
-The project uses **Catch2** for automated testing.
-
-Current coverage includes:
-
-- Construction and initialization
-- Negative capacity validation
-- Deep copy semantics
-- Move semantics
-- Assignment operator behavior
-- Bounds checking
-- Resize behavior
-- Search algorithms
-  - Linear Search
-  - Binary Search
-- Reverse operations
-- Range Reverse operations
-- Rotation behavior
-- Iterator support
-- Aggregate operations
-  - Sum
-  - Average
-- Empty vector behavior
-- First/Last element access
-- Clear operation
-- Pop operation
-
-Current results:
-
-```text
-34 test cases
-84 assertions
-100% passing
-```
-
-CTest output:
-
-```text
-100% tests passed out of 1
-
-All tests passed (84 assertions in 34 test cases)
-```
-
----
-
-## Continuous Integration
-
-The project uses GitHub Actions for continuous integration.
-
-Every push and pull request automatically:
-
-1. Configures the project using CMake
-2. Builds the project
-3. Executes the Catch2 test suite through CTest
-
-Current CI status:
-
-```text
-Build: Passing
-Tests: Passing
-34 test cases
-84 assertions
-100% passing
-```
-
----
-
 ## Project Structure
 
 ```text
@@ -271,8 +255,6 @@ Vector/
 └── README.md
 ```
 
----
-
 ## Technologies
 
 - C++17
@@ -282,22 +264,14 @@ Vector/
 - GitHub Actions
 - Git
 - GitHub
-- GNU g++
-
----
 
 ## Future Improvements
 
 Potential extensions include:
 
-- Explicit move assignment operator
-- `reserve()`
 - `shrink_to_fit()`
 - Additional exception-safety guarantees
-- Iterator-specific test coverage
-- Generic template-based implementation (`Vec<T>`)
-
----
+- Generic template implementation (`Vec<T>`)
 
 ## Author
 
