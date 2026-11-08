@@ -277,3 +277,15 @@ TEST_CASE("clear empties vector")
     CHECK(v.size() == 0);
 }
 
+TEST_CASE("pop removes last element")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+
+    v.pop();
+
+    CHECK(v.size() == 1);
+    CHECK(v.last() == 1);
+}
