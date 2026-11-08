@@ -181,6 +181,11 @@ bool Vec::linearSearch(int x) const
     return false;
 }
 
+bool binarySearch(int x) const
+{
+    
+}
+
 int Vec::sum() const
 {
     int s = 0;

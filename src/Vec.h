@@ -40,7 +40,10 @@ public:
     const int& last() const;
 
     void clear();
+
     bool linearSearch(int x) const;
+    bool binarySearch(int x) const;
+    
     int sum() const;
     double avg() const;
 
