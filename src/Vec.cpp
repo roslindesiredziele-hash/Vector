@@ -47,7 +47,7 @@ Vec::Vec(Vec&& other) noexcept
     other.mem = nullptr;
 }
 
-int swapInt(int a, int b)
+int swapInt(int &a, int &b)
 {
     int temp = a;
     a = b;
@@ -124,7 +124,7 @@ void Vec::resize(int new_cap)
 {
     int new_capacity = std::max(1, new_cap);
     int* new_mem = new int[new_capacity];
-    cap = new_capacity
+    cap = new_capacity;
 
     // Adjust length if needed
     len = std::min(len, cap);
@@ -196,24 +196,25 @@ bool Vec::linearSearch(int x) const
     return false;
 }
 
-bool Vec::binarySearch(int x) const
+int Vec::binarySearch(int x) const
 {
-    if(empty()) return -1;
-    
-    int mid = len/2;
-    
-    if (mem[mid] == x) return mid;
-    
-    if ( mem[mid] > x)
+    int left = 0;
+    int right = len - 1;
+
+    while (left <= right)
     {
-    return binarySearch(x);
+        int mid = left + (right - left) / 2;
+
+        if (mem[mid] == x)
+            return mid;
+
+        if (mem[mid] < x)
+            left = mid + 1;
+        else
+            right = mid - 1;
     }
-else
-    {
-    int r = binarySearch(x);
-    if (r >=0)  return mid +1+r;
+
     return -1;
-    }
 }
 
 int Vec::sum() const

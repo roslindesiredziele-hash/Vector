@@ -42,7 +42,7 @@ public:
     void clear();
 
     bool linearSearch(int x) const;
-    bool binarySearch(int x) const;
+    int binarySearch(int x) const;
 
     int sum() const;
     double avg() const;
