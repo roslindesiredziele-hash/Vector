@@ -369,3 +369,20 @@ TEST_CASE("rotate by length does nothing")
     CHECK(v[2] == 3);
     CHECK(v[3] == 4);
 }
+
+TEST_CASE("negative rotation rotates left")
+{
+    Vec v(4);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+    v.push(4);
+
+    v.rotate(-1);
+
+    CHECK(v[0] == 2);
+    CHECK(v[1] == 3);
+    CHECK(v[2] == 4);
+    CHECK(v[3] == 1);
+}
