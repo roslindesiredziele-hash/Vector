@@ -227,3 +227,17 @@ TEST_CASE("linear search finds existing value")
     CHECK(v.linearSearch(2));
     CHECK_FALSE(v.linearSearch(99));
 }
+
+TEST_CASE("binary search returns index")
+{
+    Vec v(5);
+
+    v.push(1);
+    v.push(3);
+    v.push(5);
+    v.push(7);
+    v.push(9);
+
+    CHECK(v.binarySearch(5) == 2);
+    CHECK(v.binarySearch(99) == -1);
+}
