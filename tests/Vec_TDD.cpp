@@ -145,3 +145,16 @@ TEST_CASE("resize preserves data")
     CHECK(v[1] == 2);
     CHECK(v[2] == 3);
 }
+
+TEST_CASE("sum computes total")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    CHECK(v.sum() == 6);
+}
+
+
