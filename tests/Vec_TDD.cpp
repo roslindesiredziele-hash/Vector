@@ -332,3 +332,10 @@ TEST_CASE("moved-from vector remains valid")
     CHECK(b[1] == 20);
 }
 
+TEST_CASE("binary search on empty vector")
+{
+    Vec v(1);
+
+    CHECK(v.binarySearch(5) == -1);
+}
+
