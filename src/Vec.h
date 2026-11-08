@@ -59,6 +59,7 @@ public:
 
     Vec(const Vec& other);
     Vec& operator=(Vec cpy);
+    Vec(Vec&& other) noexcept;
 };
 
 std::ostream& operator<<(std::ostream& ostr, const Vec& v);
