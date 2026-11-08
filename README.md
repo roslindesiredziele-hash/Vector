@@ -1,6 +1,7 @@
 # Vec
 
 ## Table of Contents
+---
 
                                                                                                                                                                                                                     - [Project Overview](#project-overview)
                                                                                                                                                                                                                     - [Features](#features)
