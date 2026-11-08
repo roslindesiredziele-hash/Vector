@@ -228,7 +228,7 @@ int Vec::sum() const
 double Vec::avg() const
 {
     if (len == 0)
-        return 0.0; // avoid division by zero
+        return 0.0;
 
     return static_cast<double>(sum()) / len;
 }
@@ -259,12 +259,10 @@ void Vec::rotate(int x)
     if (len == 0)
         return;
 
-    // Normalize x
     x = x % len;
     if (x < 0)
         x += len;
 
-    // If x == 0, no rotation needed
     if (x == 0)
         return;
 
