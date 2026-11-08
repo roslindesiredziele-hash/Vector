@@ -241,3 +241,13 @@ TEST_CASE("binary search returns index")
     CHECK(v.binarySearch(5) == 2);
     CHECK(v.binarySearch(99) == -1);
 }
+
+TEST_CASE("empty vector behavior")
+{
+    Vec v(1);
+
+    CHECK(v.empty());
+
+    REQUIRE_THROWS(v.first());
+    REQUIRE_THROWS(v.last());
+}
