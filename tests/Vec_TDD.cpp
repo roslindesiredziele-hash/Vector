@@ -440,3 +440,9 @@ TEST_CASE("reverse throws on invalid range")
     );
 }
 
+TEST_CASE("sum of empty vector is zero")
+{
+    Vec v(1);
+
+    CHECK(v.sum() == 0);
+}
