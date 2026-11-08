@@ -302,3 +302,16 @@ TEST_CASE("resize to zero keeps minimum capacity")
 
     CHECK(v[0] == 1);
 }
+
+TEST_CASE("pop on empty vector is safe")
+{
+    Vec v(1);
+
+    CHECK(v.empty());
+
+    v.pop();
+
+    CHECK(v.empty());
+    CHECK(v.size() == 0);
+}
+
