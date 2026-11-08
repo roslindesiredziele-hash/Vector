@@ -280,4 +280,12 @@ const int* Vec::begin() const
     return mem;
 }
 
+int* Vec::end()
+{
+    return mem + len;
+}
 
+const int* Vec::end() const
+{
+    return mem + len;
+}
