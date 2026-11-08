@@ -47,7 +47,7 @@ Vec::Vec(Vec&& other) noexcept
     other.mem = nullptr;
 }
 
-int swapInt(int &a, int &b)
+void swapInt(int &a, int &b)
 {
     int temp = a;
     a = b;
