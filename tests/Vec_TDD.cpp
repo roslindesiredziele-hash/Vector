@@ -415,3 +415,28 @@ TEST_CASE("reverse single element vector")
     CHECK(v.size() == 1);
     CHECK(v[0] == 42);
 }
+
+TEST_CASE("reverse throws on invalid range")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    REQUIRE_THROWS_AS(
+        v.reverse(-1, 2),
+        std::out_of_range
+    );
+
+    REQUIRE_THROWS_AS(
+        v.reverse(1, 10),
+        std::out_of_range
+    );
+
+    REQUIRE_THROWS_AS(
+        v.reverse(2, 1),
+        std::out_of_range
+    );
+}
+
