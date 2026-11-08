@@ -1,6 +1,6 @@
 # Hi, I'm Desire Roslin Dziele 👋
 
-### Computer Science Student at the University of Łódź
+### Computer Science Student | C++ • Algorithms • Full-Stack Development
 
 I am a Computer Science student at the University of Łódź with a strong interest in software engineering, modern C++, algorithms, systems programming, and full-stack web development.
 
@@ -14,10 +14,10 @@ Many of my projects incorporate automated testing, build automation, and continu
 
 ### Languages
 
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![C++17](https://img.shields.io/badge/C%2B%2B17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ### Full-Stack Development
 
@@ -32,7 +32,7 @@ Many of my projects incorporate automated testing, build automation, and continu
 ![Supertest](https://img.shields.io/badge/Supertest-333333?style=for-the-badge)
 
 ![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
-![CTest](https://img.shields.io/badge/CTest-00599C?style=for-the-badge)
+![CTest](https://img.shields.io/badge/CTest-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -61,7 +61,7 @@ Many of my projects incorporate automated testing, build automation, and continu
 
 Full-stack CRUD application built with Angular, Express.js, SQLite, and TypeScript.
 
-Features:
+**Features**
 
 - RESTful API design
 - Database persistence
@@ -72,7 +72,7 @@ Features:
 **Tech:** Angular, Express.js, SQLite, TypeScript, Vitest, Supertest
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/person-management-system
+<https://github.com/roslindesiredziele-hash/person-management-system>
 
 ---
 
@@ -87,7 +87,7 @@ Performance-analysis project implementing and benchmarking:
 - Heap Sort
 - Shell Sort
 
-Features:
+**Features**
 
 - Automated benchmarking
 - CSV result generation
@@ -99,15 +99,15 @@ Features:
 **Tech:** C, C++, Python, Algorithms
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/Algorithms-Sorting-Benchmark
+<https://github.com/roslindesiredziele-hash/Algorithms-Sorting-Benchmark>
 
 ---
 
 ### 📦 Vec
 
-Custom dynamic array implementation built to explore memory management, iterator support, and container design in modern C++.
+Custom dynamic array implementation built to explore memory management, iterator support, value semantics, and container design in modern C++.
 
-Features:
+**Features**
 
 - Deep copy semantics
 - Move semantics
@@ -126,7 +126,7 @@ Features:
 **Tech:** C++, Catch2, CMake, CTest, GitHub Actions
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/Vector
+<https://github.com/roslindesiredziele-hash/Vector>
 
 ---
 
@@ -134,7 +134,7 @@ https://github.com/roslindesiredziele-hash/Vector
 
 Object-oriented programming project modelling natural and programming languages through abstraction, inheritance, polymorphism, and virtual dispatch.
 
-Features:
+**Features**
 
 - Inheritance hierarchies
 - Runtime polymorphism
@@ -152,20 +152,14 @@ Features:
 **Tech:** C++, OOP, Catch2, CMake, CTest, GitHub Actions
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/Language
-
----
-
-### 🚚 CVRPTW
-
-Implementation of the Capacitated Vehicle Routing Problem with Time Windows focusing on route optimization, scheduling constraints, and combinatorial optimization.
+<https://github.com/roslindesiredzielee Capacitated Vehicle Routing Problem with Time Windows focusing on route optimization, scheduling constraints, and combinatorial optimization.
 
 This project is being developed as the foundation for my future bachelor's project.
 
 **Tech:** C++, Optimization
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/CVRPTW
+<https://github.com/roslindesiredziele-hash/CVRPTW>
 
 ---
 
@@ -176,7 +170,7 @@ Object-oriented implementation for parsing, validating, and manipulating IPv4 ad
 **Tech:** C++, OOP
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/IPv4Address
+<https://github.com/roslindesiredziele-hash/IPv4Address>
 
 ---
 
@@ -187,7 +181,7 @@ Geographic distance calculator implementing coordinate-based distance calculatio
 **Tech:** C++, OOP
 
 🔗 Repository:  
-https://github.com/roslindesiredziele-hash/CitiesDistance
+<https://github.com/roslindesiredziele-hash/CitiesDistance>
 
 ---
 
@@ -200,7 +194,13 @@ https://github.com/roslindesiredziele-hash/CitiesDistance
 - Angular Ecosystem
 - Backend Development with Express.js
 - Optimization Algorithms
-- Routing and Schedulingilding production-quality software projects
+- Routing and Scheduling Problems
+
+---
+
+## Current Goals
+
+- Continue building production-quality software projects
 - Obtain a software engineering internship
 - Complete Kanban as a portfolio-grade full-stack application
 - Evolve CVRPTW into a bachelor-project-quality optimization system
@@ -212,8 +212,8 @@ https://github.com/roslindesiredziele-hash/CitiesDistance
 
 📧 Email: **roslindesiredziele@gmail.com**
 
-💻 GitHub: **https://github.com/roslindesiredziele-hash**
+💻 GitHub: **<https://github.com/roslindesiredziele-hash>**
 
 ---
 
-> “Understanding how software works internally is the best way to build software that lasts.”
+> *"Understanding how software works internally is the best way to build software that lasts."*
