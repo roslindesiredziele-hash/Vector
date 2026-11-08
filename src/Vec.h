@@ -48,7 +48,8 @@ public:
     int* begin ();
     const int* begin() const;
 
-    
+    int* end();
+    const int* end() const;
 
     Vec(const Vec& other);
     Vec& operator=(Vec cpy);
