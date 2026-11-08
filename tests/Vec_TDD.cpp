@@ -263,3 +263,17 @@ TEST_CASE("first and last return correct values")
     CHECK(v.first() == 1);
     CHECK(v.last() == 3);
 }
+
+TEST_CASE("clear empties vector")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+
+    v.clear();
+
+    CHECK(v.empty());
+    CHECK(v.size() == 0);
+}
+
