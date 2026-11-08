@@ -109,6 +109,16 @@ TEST_CASE("Assignment operator performs deep copy")
     CHECK(b[0] == 10);
 }
 
+TEST_CASE("get throws on invalid index")
+{
+    Vec v(1);
+
+    REQUIRE_THROWS_AS(
+        v.get(0),
+        std::out_of_range
+    );
+}
+
 
 
 
