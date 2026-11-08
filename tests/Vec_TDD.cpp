@@ -270,3 +270,21 @@ TEST_CASE("pop removes last element")
     CHECK(v.size() == 1);
     CHECK(v.last() == 1);
 }
+
+TEST_CASE("resize shrinks vector")
+{
+    Vec v(5);
+
+    for(int i = 1; i <= 5; i++)
+        v.push(i);
+
+    v.resize(3);
+
+    CHECK(v.size() == 3);
+    CHECK(v.capacity() == 3);
+
+    CHECK(v[0] == 1);
+    CHECK(v[1] == 2);
+    CHECK(v[2] == 3);
+}
+
