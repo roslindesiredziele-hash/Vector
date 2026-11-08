@@ -183,3 +183,35 @@ TEST_CASE("reverse flips vector")
     CHECK(v[2] == 1);
 }
 
+TEST_CASE("reverse range reverses subsection")
+{
+    Vec v(5);
+
+    for(int i=1;i<=5;i++)
+        v.push(i);
+
+    v.reverse(1,3);
+
+    CHECK(v[0] == 1);
+    CHECK(v[1] == 4);
+    CHECK(v[2] == 3);
+    CHECK(v[3] == 2);
+    CHECK(v[4] == 5);
+}
+
+TEST_CASE("rotate right")
+{
+    Vec v(4);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+    v.push(4);
+
+    v.rotate(1);
+
+    CHECK(v[0] == 4);
+    CHECK(v[1] == 1);
+    CHECK(v[2] == 2);
+    CHECK(v[3] == 3);
+}
