@@ -386,3 +386,20 @@ TEST_CASE("negative rotation rotates left")
     CHECK(v[2] == 4);
     CHECK(v[3] == 1);
 }
+
+TEST_CASE("iterators support range based loops")
+{
+    Vec v(4);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+    v.push(4);
+
+    int total = 0;
+
+    for (int value : v)
+        total += value;
+
+    CHECK(total == 10);
+}
