@@ -181,9 +181,24 @@ bool Vec::linearSearch(int x) const
     return false;
 }
 
-bool binarySearch(int x) const
+bool Vec::binarySearch(int x) const
 {
+    if(empty()) return -1;
     
+    int mid = len/2;
+    
+    if (mem[mid] == x) return mid;
+    
+    if ( mem[mid] > x)
+    {
+    return binarySearch(A, mid, x);
+    }
+else
+    {
+    int r = binarySearch(A + mid +1, n - mid - 1, x);
+    if (r >=0)  return mid +1+r;
+    return -1;
+    }
 }
 
 int Vec::sum() const
