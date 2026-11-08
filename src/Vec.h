@@ -1,7 +1,7 @@
 #ifndef VEC_H
 #define VEC_H
 
-#include <iostream>
+#include <ostream>
 
 class Vec
 {
@@ -43,8 +43,9 @@ public:
 
     void reverse();
     void reverse(int l, int r);
-
     void rotate(int x);
+
+    
 
     Vec(const Vec& other);
     Vec& operator=(Vec cpy);
