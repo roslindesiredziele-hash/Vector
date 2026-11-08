@@ -122,9 +122,8 @@ bool Vec::empty() const
 
 void Vec::resize(int new_cap)
 {
-    int* new_mem = new int[new_cap];
-    cap = new_cap;
-    int new_len = std::min(len, new_cap);
+    int new_capacity = std::max(1, new_cap);
+    int* new_mem = new int[new_capacity);
 
     for (int i = 0; i < new_len; i++)
         new_mem[i] = mem[i];
