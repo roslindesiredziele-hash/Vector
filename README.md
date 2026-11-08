@@ -1,8 +1,8 @@
 # Vec
 
-A custom dynamic array implementation in modern C++ designed to explore memory management, value semantics, dynamic resizing, search algorithms, and automated testing.
+A custom dynamic array implementation written in modern C++ to explore memory management, copy and move semantics, dynamic resizing, iterator support, algorithm implementation, and automated testing.
 
-The project was developed as an educational exercise to better understand how containers such as `std::vector` work internally.
+The project was developed as an educational exercise to better understand how containers such as `std::vector` work internally while applying modern software engineering practices including automated testing, build automation, and continuous integration.
 
 ---
 
@@ -11,7 +11,7 @@ The project was developed as an educational exercise to better understand how co
 ### Memory Management
 
 - Dynamic memory allocation
-- Automatic capacity growth
+- Automatic capacity growth through capacity doubling
 - Deep copy semantics
 - Move semantics
 - Resource ownership management
@@ -48,7 +48,7 @@ The project was developed as an educational exercise to better understand how co
 - `begin()`
 - `end()`
 
-Supports range-based `for` loops:
+Supports range-based loops:
 
 ```cpp
 for (int value : vec)
@@ -61,14 +61,15 @@ for (int value : vec)
 
 ## Design Goals
 
-The project focuses on:
+This project focuses on:
 
 - Understanding dynamic memory management
 - Exploring copy and move semantics
 - Implementing common container operations
 - Practicing exception handling
-- Building automated tests using Catch2
+- Building automated test suites with Catch2
 - Using CMake and CTest for build automation
+- Applying continuous integration through GitHub Actions
 
 ---
 
@@ -76,6 +77,7 @@ The project focuses on:
 
 ```cpp
 #include "Vec.h"
+#include <iostream>
 
 int main()
 {
@@ -97,6 +99,22 @@ Output:
 
 ---
 
+## Design Notes
+
+### Capacity Growth
+
+When the vector reaches its capacity during insertion, the storage capacity is automatically doubled.
+
+### Resize Behavior
+
+In this implementation, `resize()` modifies both capacity and logical size when shrinking. If the new capacity is smaller than the current number of stored elements, excess elements are discarded.
+
+### Binary Search
+
+`binarySearch()` assumes that elements are stored in ascending sorted order.
+
+---
+
 ## Complexity
 
 | Operation | Complexity |
@@ -114,15 +132,21 @@ Output:
 
 ---
 
-## Build
-
-### Requirements
+## Requirements
 
 - C++17 compatible compiler
 - CMake 3.10+
-- Catch2 (single-header version)
+- Catch2 Single Header Version (`external/catch.hpp`)
+
+Supported compilers:
+
+- GNU g++
+- Clang
+- Microsoft Visual Studio (MSVC)
 
 ---
+
+## Build
 
 ### Configure
 
@@ -141,11 +165,13 @@ cmake --build .
 
 ### Run Tests
 
+Linux/macOS:
+
 ```bash
 ctest --verbose
 ```
 
-For Visual Studio generators:
+Visual Studio:
 
 ```bash
 ctest -C Debug --verbose
@@ -159,36 +185,65 @@ The project uses **Catch2** for automated testing.
 
 Current coverage includes:
 
-- Construction
+- Construction and initialization
+- Negative capacity validation
 - Deep copy semantics
 - Move semantics
-- Assignment operator
+- Assignment operator behavior
 - Bounds checking
 - Resize behavior
 - Search algorithms
+  - Linear Search
+  - Binary Search
 - Reverse operations
-- Rotation
+- Range Reverse operations
+- Rotation behavior
+- Iterator support
 - Aggregate operations
+  - Sum
+  - Average
+- Empty vector behavior
+- First/Last element access
+- Clear operation
+- Pop operation
 
 Current results:
 
 ```text
-21 test cases
-49 assertions
+34 test cases
+84 assertions
 100% passing
+```
+
+CTest output:
+
+```text
+100% tests passed out of 1
+
+All tests passed (84 assertions in 34 test cases)
 ```
 
 ---
 
 ## Continuous Integration
 
-GitHub Actions automatically:
+The project uses GitHub Actions for continuous integration.
 
-1. Configures the project with CMake
+Every push and pull request automatically:
+
+1. Configures the project using CMake
 2. Builds the project
-3. Runs the full test suite
+3. Executes the Catch2 test suite through CTest
 
-Every push and pull request is validated automatically.
+Current CI status:
+
+```text
+Build: Passing
+Tests: Passing
+34 test cases
+84 assertions
+100% passing
+```
 
 ---
 
@@ -218,20 +273,34 @@ Vector/
 
 ---
 
+## Technologies
+
+- C++17
+- Catch2
+- CMake
+- CTest
+- GitHub Actions
+- Git
+- GitHub
+- GNU g++
+
+---
+
 ## Future Improvements
 
-Potential extensions:
+Potential extensions include:
 
-- Move assignment operator
-- reserve()
-- shrink_to_fit()
+- Explicit move assignment operator
+- `reserve()`
+- `shrink_to_fit()`
 - Additional exception-safety guarantees
+- Iterator-specific test coverage
+- Generic template-based implementation (`Vec<T>`)
 
 ---
 
 ## Author
 
-Desire Roslin Dziele
-
+**Desire Roslin Dziele**  
 Computer Science Student  
 University of Łódź
