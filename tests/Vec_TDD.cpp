@@ -157,4 +157,29 @@ TEST_CASE("sum computes total")
     CHECK(v.sum() == 6);
 }
 
+TEST_CASE("avg computes mean")
+{
+    Vec v(3);
+
+    v.push(2);
+    v.push(4);
+    v.push(6);
+
+    CHECK(v.avg() == Approx(4.0));
+}
+
+TEST_CASE("reverse flips vector")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    v.reverse();
+
+    CHECK(v[0] == 3);
+    CHECK(v[1] == 2);
+    CHECK(v[2] == 1);
+}
 
