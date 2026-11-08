@@ -446,3 +446,10 @@ TEST_CASE("sum of empty vector is zero")
 
     CHECK(v.sum() == 0);
 }
+
+TEST_CASE("average of empty vector is zero")
+{
+    Vec v(1);
+
+    CHECK(v.avg() == Approx(0.0));
+}
