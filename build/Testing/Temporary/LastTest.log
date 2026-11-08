@@ -1,10 +1,10 @@
-Start testing: Nov 08 18:19 Central European Standard Time
+Start testing: Nov 08 18:38 Central European Standard Time
 ----------------------------------------------------------
 1/1 Testing: VecTests
 1/1 Test: VecTests
 Command: "C:/MyPROJECTS/Custom-Dynamic-Vector/build/Debug/Vec_TDD.exe"
 Directory: C:/MyPROJECTS/Custom-Dynamic-Vector/build
-"VecTests" start time: Nov 08 18:19 Central European Standard Time
+"VecTests" start time: Nov 08 18:38 Central European Standard Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -14,8 +14,8 @@ All tests passed (8 assertions in 2 test cases)
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"VecTests" end time: Nov 08 18:19 Central European Standard Time
+"VecTests" end time: Nov 08 18:38 Central European Standard Time
 "VecTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 08 18:19 Central European Standard Time
+End testing: Nov 08 18:38 Central European Standard Time
