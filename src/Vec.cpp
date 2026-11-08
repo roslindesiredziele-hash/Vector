@@ -38,8 +38,13 @@ Vec::~Vec()
 }
 
 Vec::Vec(Vec&& other) noexcept
+    : cap(other.cap),
+      len(other.len),
+      mem(other.mem)
 {
-
+    other.cap = 0;
+    other.len = 0;
+    other.mem = nullptr;
 }
 
 int swapInt(int a, int b)
