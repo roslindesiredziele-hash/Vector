@@ -8,10 +8,10 @@ Directory: C:/MyPROJECTS/Custom-Dynamic-Vector/build
 Output:
 ----------------------------------------------------------
 ===============================================================================
-All tests passed (8 assertions in 2 test cases)
+All tests passed (49 assertions in 21 test cases)
 
 <end of output>
-Test time =   0.06 sec
+Test time =   0.19 sec
 ----------------------------------------------------------
 Test Passed.
 "VecTests" end time: Nov 08 18:38 Central European Standard Time
