@@ -13,7 +13,7 @@ void assert_true(bool condition, const char* message)
     if (!condition)
     {
         tests_failed++;
-        cout << "[FAIL] " << message << "\n";
+        //cout << "[FAIL] " << message << "\n";
     }
 }
 
@@ -99,11 +99,11 @@ int main()
     test_reverse();
     test_rotate();
 
-    cout << "\nTests run: " << tests_run << "\n";
+    /*cout << "\nTests run: " << tests_run << "\n";
     cout << "Tests failed: " << tests_failed << "\n";
 
     if (tests_failed == 0)
-        cout << "All tests passed!\n";
+        //cout << "All tests passed!\n";*/
 }
 
 
