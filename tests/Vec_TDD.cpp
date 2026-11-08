@@ -2,7 +2,7 @@
 
 #include "../external/catch.hpp"
 
-#include "Vec.h"
+#include "../src/Vec.h"
 
 TEST_CASE("push increases size and stores values")
 {
