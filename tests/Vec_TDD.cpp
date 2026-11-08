@@ -353,3 +353,19 @@ TEST_CASE("binary search finds boundary elements")
     CHECK(v.binarySearch(9) == 4);
 }
 
+TEST_CASE("rotate by length does nothing")
+{
+    Vec v(4);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+    v.push(4);
+
+    v.rotate(4);
+
+    CHECK(v[0] == 1);
+    CHECK(v[1] == 2);
+    CHECK(v[2] == 3);
+    CHECK(v[3] == 4);
+}
