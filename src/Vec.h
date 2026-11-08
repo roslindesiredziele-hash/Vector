@@ -17,7 +17,7 @@ public:
     int size() const;
     int capacity() const;
 
-    int swapInt(int a, int b);
+    int swapInt(int &a, int &b);
 
 
     int& operator[](int i);
@@ -43,7 +43,7 @@ public:
 
     bool linearSearch(int x) const;
     bool binarySearch(int x) const;
-    
+
     int sum() const;
     double avg() const;
 
