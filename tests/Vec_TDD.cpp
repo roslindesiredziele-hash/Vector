@@ -38,5 +38,77 @@ TEST_CASE("copy constructor performs deep copy")
     CHECK(b.get(0) == 5);
 }
 
+TEST_CASE("Constructor initializes empty vector")
+{
+    Vec v(10);
+
+    CHECK(v.size() == 0);
+    CHECK(v.capacity() == 10);
+    CHECK(v.empty());
+}
+
+TEST_CASE("Negative capacity throws")
+{
+    REQUIRE_THROWS_AS(
+        Vec(-1),
+        std::invalid_argument
+    );
+}
+
+TEST_CASE("push updates size")
+{
+    Vec v(2);
+
+    v.push(1);
+    v.push(2);
+
+    CHECK(v.size() == 2);
+    CHECK(v.capacity() >= 2);
+}
+
+TEST_CASE("Copy constructor performs deep copy")
+{
+    Vec a(1);
+
+    a.push(5);
+
+    Vec b = a;
+
+    a[0] = 99;
+
+    CHECK(b[0] == 5);
+}
+
+TEST_CASE("Move constructor transfers ownership")
+{
+    Vec a(2);
+
+    a.push(1);
+    a.push(2);
+
+    Vec b(std::move(a));
+
+    CHECK(b.size() == 2);
+    CHECK(b[0] == 1);
+    CHECK(b[1] == 2);
+
+    CHECK(a.size() == 0);
+}
+
+TEST_CASE("Assignment operator performs deep copy")
+{
+    Vec a(1);
+    a.push(10);
+
+    Vec b(1);
+
+    b = a;
+
+    a[0] = 20;
+
+    CHECK(b[0] == 10);
+}
+
+
 
 
