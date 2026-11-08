@@ -215,3 +215,15 @@ TEST_CASE("rotate right")
     CHECK(v[2] == 2);
     CHECK(v[3] == 3);
 }
+
+TEST_CASE("linear search finds existing value")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    CHECK(v.linearSearch(2));
+    CHECK_FALSE(v.linearSearch(99));
+}
