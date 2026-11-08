@@ -125,17 +125,15 @@ void Vec::resize(int new_cap)
     int new_capacity = std::max(1, new_cap);
     int* new_mem = new int[new_capacity];
     cap = new_capacity;
+    int new_len = std::min(len, new_capacity);
 
-    // Adjust length if needed
-    len = std::min(len, cap);
-
-    // Copy existing elements
     for (int i = 0; i < len; i++)
         new_mem[i] = mem[i];
 
-    // Replace old memory
     delete[] mem;
     mem = new_mem;
+    cap = new_capacity;
+    len = new_len;
 }
 
 void Vec::push(int el)
@@ -217,7 +215,7 @@ int Vec::binarySearch(int x) const
     return -1;
 }
 
-int Vec::sum() const
+long long Vec::sum() const
 {
     long long s = 0;
     for (int i = 0; i < len; i++)

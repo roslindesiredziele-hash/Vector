@@ -44,7 +44,7 @@ public:
     bool linearSearch(int x) const;
     int binarySearch(int x) const;
 
-    int sum() const;
+    long long sum() const;
     double avg() const;
 
     void reverse();
@@ -65,4 +65,3 @@ public:
 std::ostream& operator<<(std::ostream& ostr, const Vec& v);
 
 #endif
-
