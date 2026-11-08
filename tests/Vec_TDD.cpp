@@ -1,9 +1,8 @@
 #define CATCH_CONFIG_MAIN
-#include "../external/catch.hpp"
-#include <iostream>
-#include "Vec.h"
 
-using namespace std;
+#include "../external/catch.hpp"
+
+#include "Vec.h"
 
 int tests_run = 0;
 int tests_failed = 0;
