@@ -1,26 +1,26 @@
 # Vec
 
 ## Table of Contents
----
 
-                                                                                                                                                                                                                    - [Project Overview](#project-overview)
-                                                                                                                                                                                                                    - [Features](#features)
-                                                                                                                                                                                                                        - [Memory Management](#memory-management)
-                                                                                                                                                                                                                        - [Container Operations](#container-operations)
-                                                                                                                                                                                                                        - [Element Access](#element-access)
-                                                                                                                                                                                                                        - [Algorithms](#algorithms)
-                                                                                                                                                                                                                        - [Iterator Support](#iterator-support)
-                                                                                                                                                                                                                    - [Design Goals](#design-goals)
-                                                                                                                                                                                                                    - [Example Usage](#example-usage)
-                                                                                                                                                                                                                    - [Design Notes](#design-notes)
-                                                                                                                                                                                                                    - [Complexity](#complexity)
-                                                                                                                                                                                                                    - [Requirements](#requirements)
-                                                                                                                                                                                                                    - [Build](#build)
-                                                                                                                                                                                                                    - [Testing](#testing)
-                                                                                                                                                                                                                    - [Continuous Integration](#continuous-integration)- [Project Structure](#project-structure)
-                                                                                                                                                                                                                    - [Technologies](#technologies)
-                                                                                                                                                                                                                    - [Future Improvements](#future-improvements)
-                                                                                                                                                                                                                    - [Author](#author)
+- [Project Overview](#project-overview)
+- [Features](#features)
+  - [Memory Management](#memory-management)
+  - [Container Operations](#container-operations)
+  - [Element Access](#element-access)
+  - [Algorithms](#algorithms)
+  - [Iterator Support](#iterator-support)
+- [Design Goals](#design-goals)
+- [Example Usage](#example-usage)
+- [Design Notes](#design-notes)
+- [Complexity](#complexity)
+- [Requirements](#requirements)
+- [Build](#build)
+- [Testing](#testing)
+- [Continuous Integration](#continuous-integration)
+- [Project Structure](#project-structure)
+- [Technologies](#technologies)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
 ---
 
