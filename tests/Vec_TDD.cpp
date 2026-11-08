@@ -315,3 +315,20 @@ TEST_CASE("pop on empty vector is safe")
     CHECK(v.size() == 0);
 }
 
+TEST_CASE("moved-from vector remains valid")
+{
+    Vec a(2);
+
+    a.push(10);
+    a.push(20);
+
+    Vec b(std::move(a));
+
+    CHECK(a.size() == 0);
+    CHECK(a.capacity() == 0);
+
+    CHECK(b.size() == 2);
+    CHECK(b[0] == 10);
+    CHECK(b[1] == 20);
+}
+
