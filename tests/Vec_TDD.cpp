@@ -251,3 +251,15 @@ TEST_CASE("empty vector behavior")
     REQUIRE_THROWS(v.first());
     REQUIRE_THROWS(v.last());
 }
+
+TEST_CASE("first and last return correct values")
+{
+    Vec v(3);
+
+    v.push(1);
+    v.push(2);
+    v.push(3);
+
+    CHECK(v.first() == 1);
+    CHECK(v.last() == 3);
+}
