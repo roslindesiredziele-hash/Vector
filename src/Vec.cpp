@@ -5,6 +5,8 @@
 Vec::Vec(int n)
     : cap(n), len(0), mem(new int[cap])
 {
+    if (n < 0)
+    throw std::invalid_argument("cannot be initialize with negative value");
 }
 
 Vec::Vec(const Vec &other) : cap(other.cap),
@@ -102,6 +104,14 @@ bool Vec::empty() const
 {
     return len == 0;
 }
+/*int new_capacity = std::max(1, new_cap);
+
+int* new_mem = new int[new_capacity];
+
+...
+
+cap = new_capacity;
+mem = new_mem;*/
 
 void Vec::resize(int new_cap)
 {
@@ -191,11 +201,11 @@ bool Vec::binarySearch(int x) const
     
     if ( mem[mid] > x)
     {
-    return binarySearch(A, mid, x);
+    return binarySearch(x);
     }
 else
     {
-    int r = binarySearch(A + mid +1, n - mid - 1, x);
+    int r = binarySearch(x);
     if (r >=0)  return mid +1+r;
     return -1;
     }
@@ -203,7 +213,7 @@ else
 
 int Vec::sum() const
 {
-    int s = 0;
+    long long s = 0;
     for (int i = 0; i < len; i++)
         s += mem[i];
     return s;
@@ -225,6 +235,11 @@ void Vec::reverse()
 
 void Vec::reverse(int l, int r)
 {
+    if (l < 0 || r >= len || l > r)
+    {
+        throw std::out_of_range("given");
+    }
+
     while (l < r)
     {
         swapInt(mem[l], mem[r]);
