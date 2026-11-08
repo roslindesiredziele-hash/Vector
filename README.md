@@ -225,7 +225,6 @@ Potential extensions:
 - Move assignment operator
 - reserve()
 - shrink_to_fit()
-- Iterator tests
 - Additional exception-safety guarantees
 
 ---
