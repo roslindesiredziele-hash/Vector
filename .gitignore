@@ -1,3 +1,31 @@
 .vscode/c_cpp_properties.json
 launch.json
 settings.json
+# Build directories
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+cmake_install.cmake
+Makefile
+
+# Binaries
+*.exe
+*.out
+*.obj
+*.o
+*.pdb
+*.ilk
+
+# Generated test binaries
+Vec_TDD
+Vec_TDD.exe
