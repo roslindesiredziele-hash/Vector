@@ -45,6 +45,9 @@ public:
     void reverse(int l, int r);
     void rotate(int x);
 
+    int* begin ();
+    const int* begin() const;
+
     
 
     Vec(const Vec& other);
