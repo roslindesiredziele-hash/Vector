@@ -1,0 +1,73 @@
+# Build directories
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# CMake
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+cmake_install.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# Binaries
+*.exe
+*.out
+*.obj
+*.o
+*.pdb
+*.ilk
+
+/build/
+/out/
+/bin/
+/obj/
+
+*.exe
+*.pdb
+*.ilk
+*.user
+*.VC.db
+
+.vs/
+
+CMakeUserPresets.json
+
+# Build artifacts
+/build/
+/out/
+/bin/
+
+# Visual Studio
+.vs/
+*.VC.db
+*.opendb
+*.suo
+*.user
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+
+# Executables
+*.exe
+*.dll
+*.ilk
+*.pdb
+
+# Ignore implementation folders on this branch
+/src/
+/linked_list/
+/tests/
+/external/
+
+# Ignore project files if not benchmarking-related
+Vector.vcxproj
+Vector.vcxproj.filters
+report.docx
